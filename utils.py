@@ -17,7 +17,7 @@ def get_env(env):
       print("   Exiting script. Please add and run again.")
       quit()
 
-env_vars = ["VENMO_ACCESS_TOKEN", "TELEGRAM_CHAT_ID", "TELEGRAM_BOT_TOKEN", "K_FRIEND_ID"]
+env_vars = ["VENMO_ACCESS_TOKEN", "VENMO_FUND_SOURCE", "TELEGRAM_CHAT_ID", "TELEGRAM_BOT_TOKEN", "K_FRIEND_ID"]
 
 def verify_env_vars(vars, numOfExpected):
   """
@@ -83,4 +83,5 @@ class Telegram:
         self.client = get_notifier('telegram')
 
     def send_message(self, message):
+        print(self.chat_id)
         self.client.notify(message=message, token=self.bot_token, chat_id=self.chat_id)

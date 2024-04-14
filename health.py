@@ -9,7 +9,7 @@ def main(now):
   print(f'🕘 Monthly health check running on {date} at {time}.\n')
 
   print("🔍 Verifying environment variables...")
-  numOfExpected =  4
+  numOfExpected =  5
   envVarsAreDefined = verify_env_vars(env_vars, numOfExpected)
 
   if envVarsAreDefined:
@@ -17,7 +17,10 @@ def main(now):
   else:
     print('❌ Failed to verify environment variables.\n')
 
-  access_token, chat_id, bot_token, *tail = get_env_vars(env_vars)
+  access_token=get_env('VENMO_ACCESS_TOKEN')
+  chat_id=get_env('TELEGRAM_CHAT_ID')
+  bot_token=get_env('TELEGRAM_BOT_TOKEN')
+  #*tail = get_env_vars(env_vars)
 
   venmo = Venmo(access_token)
   telegram = Telegram(bot_token, chat_id)
