@@ -17,7 +17,7 @@ def get_env(env):
       print("   Exiting script. Please add and run again.")
       quit()
 
-env_vars = ["VENMO_ACCESS_TOKEN", "TELEGRAM_CHAT_ID", "TELEGRAM_BOT_TOKEN", "K_FRIEND_ID", "C_FRIEND_ID", "W_FRIEND_ID", "J_FRIEND_ID"]
+env_vars = ["VENMO_ACCESS_TOKEN", "TELEGRAM_CHAT_ID", "TELEGRAM_BOT_TOKEN", "K_FRIEND_ID"]
 
 def verify_env_vars(vars, numOfExpected):
   """
@@ -32,7 +32,7 @@ def verify_env_vars(vars, numOfExpected):
     if get_env(var):
         availableEnvVars.append(var)
 
-  if len(availableEnvVars) == numOfExpected:
+  if len(availableEnvVars) >= numOfExpected:
     return True
   else:
     # This will technically never run
