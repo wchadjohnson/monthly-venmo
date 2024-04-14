@@ -5,9 +5,9 @@ name: Run Pay Script
 
 on:
   schedule:
-    # 4pm UTC on the 7th of the month
-    # https://crontab.guru/#0_8_1_*_*
-    - cron: "0 8 1 * *"
+    # 15th of month in May-Aug
+    # https://crontab.guru/#0_14_15_5,6,7,8_*
+    - cron: "0 14 15 5,6,7,8 *"
   workflow_dispatch:
 
 jobs:
