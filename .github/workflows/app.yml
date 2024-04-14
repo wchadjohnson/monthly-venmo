@@ -1,13 +1,13 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Run Script
+name: Run Pay Script
 
 on:
   schedule:
     # 4pm UTC on the 7th of the month
-    # https://crontab.guru/#0_16_7_*_*
-    - cron: "0 16 7 * *"
+    # https://crontab.guru/#0_8_1_*_*
+    - cron: "0 8 1 * *"
   workflow_dispatch:
 
 jobs:
@@ -33,12 +33,8 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Run script
         run: |
-          python init.py
+          python pay.py
         env:
           VENMO_ACCESS_TOKEN: ${{ secrets.VENMO_ACCESS_TOKEN }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          VENMO_FUND_SOURCE: ${{ secrets.VENMO_FUND_SOURCE }}
           K_FRIEND_ID: ${{ secrets.K_FRIEND_ID }}
-          C_FRIEND_ID: ${{ secrets.C_FRIEND_ID }}
-          W_FRIEND_ID: ${{ secrets.W_FRIEND_ID }}
-          J_FRIEND_ID: ${{ secrets.J_FRIEND_ID }}
