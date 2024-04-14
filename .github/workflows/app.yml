@@ -40,5 +40,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           PAY_AMOUNT: ${{ vars.PAY_AMOUNT }}
+          PAY_NOTE: ${{ vars.PAY_NOTE }}
           VENMO_PAY_USERNAME: ${{ vars.VENMO_PAY_USERNAME }}
+          
 
