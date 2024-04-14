@@ -13,14 +13,16 @@ def main(now):
   load_dotenv()  # take environment variables from .env.
 
   access_token=get_env('VENMO_ACCESS_TOKEN')
-  k_friend_id=get_env('K_FRIEND_ID')
+  VENMO_PAY_USERNAME=get_env('VENMO_PAY_USERNAME')
   venmo_fund_source=get_env('VENMO_FUND_SOURCE')
+  pay_amount=float(get_env('PAY_AMOUNT'))
  
   #month = get_month(now)
   venmo = Client(access_token=access_token)
   #telegram = Telegram(bot_token, chat_id)
 
-  venmo.payment.send_money(amount=160.00, note='Lawn Care Services - 4 cuts', target_user_id=k_friend_id, funding_source_id=venmo_fund_source)
+  user = venmo.user.get_user_by_username(VENMO_PAY_USERNAME)
+  venmo.payment.send_money(amount=pay_amount, note='Lawn Care Services - 4 cuts', target_user=user, funding_source_id=venmo_fund_source)
 
 #  if success:
 #    print("✅ Ran Vemo Pay script successfully")
