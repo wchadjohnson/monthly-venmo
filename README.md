@@ -9,22 +9,7 @@
 
   <h3 align="center">monthly-venmo</h3>
 
-  <p align="center">
-    A Python script to automate monthly Venmo requests
-    <br />
-    <a href="https://github.com/jsjoeio/monthly-venmo"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://www.youtube.com/watch?v=cMHORRmHDJs">View Demo</a>
-    ·
-    <a href="https://github.com/jsjoeio/monthly-venmo/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/jsjoeio/monthly-venmo/issues">Ask a Question</a>
-  </p>
-</p>
-
-[![ui.dev newsletter - your weekly dose of JS](/images/dose-16x1.jpg)](https://bytes.dev/?r=jsjoeio)
-Support the project by signing up for the UI.dev newsletter using [our link](https://bytes.dev/?r=jsjoeio)!
+Support the orignal forked project by signing up for the UI.dev newsletter using [our link](https://bytes.dev/?r=jsjoeio)!
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
