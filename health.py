@@ -44,16 +44,10 @@ def main(now):
 
     if envVarsAreDefined and returnedUserId:
         print('✅ Everything looks good in the health check')
-        message = """Hello old sport! 👋
+        message = """Monthly Venmo Health Check 👋
 
-Checking in from your Monthly Venmo script.
-
-According to my calculations, everything looks in order.
-You money should be requested per usual this month.
-
-Cheerio!
-
-— Efron 🤵🏻‍♂️
+Everything looks in order.
+You money should be transferred per usual this month.
         """
         telegram.send_message(message)
     elif envVarsAreDefined:
