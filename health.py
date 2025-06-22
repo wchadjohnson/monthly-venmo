@@ -56,7 +56,7 @@ You money should be transferred per usual this month.
 
 As you can tell by the hesitation in my voice (or rather writing...), I don't have great news.
 
-According to my calculations, the environment variables in your Monthly Venmo script are working, but the Venmo client isn't.
+The environment variables in your Monthly Venmo script are working, but the Venmo client isn't.
 
 If I were smarter, I would fix it myself, but you know, I'm just an assistant. That's beyond my paygrade.
 
