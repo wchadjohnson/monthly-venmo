@@ -43,7 +43,7 @@ Support the orignal forked project by signing up for the UI.dev newsletter using
   <img src="./images/telegram-screenshot.png" width="60%"/>
 </div>
 
-This is a Python script which runs once a month and sends Venmo payments. And it notifies you via Telegram when the requests were sent.
+This is a Python script which runs once a month and sends Venmo payments. It can notify you via Telegram when the payments are sent.
 
 There is also a second script — `health.py` — which runs once a week on Sundays to ensure everything is working as expected.
 
